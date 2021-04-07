@@ -4,8 +4,7 @@
 ## 目录
 1. [主要工作 Contribution](#主要工作)
 3. [环境配置 Environment](#环境配置)
-4. [注意事项 Attention](#注意事项)
-5. [小技巧的设置 TricksSet](#小技巧的设置)
+5. [代码功能 Function](#代码功能)
 6. [文件下载 Download](#文件下载)
 7. [预测步骤 How2predict](#预测步骤)
 8. [训练步骤 How2train](#训练步骤)
@@ -52,3 +51,8 @@ python setup.py install
 ```python
 pip install face_recognition -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
+
+最后进入[环境检测Notebook](Env_Test.ipynb)，检查环境是否配置一致  
+
+## 代码功能
+
