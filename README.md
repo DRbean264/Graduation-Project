@@ -24,7 +24,7 @@ CUDA10.1+cudnn7.6.5
 Visual Studio 2017
 
 ### 普通库安装(直接pip install)
-tensorflow-gpu==1.13.1  
+tensorflow-gpu==2.1.0  
 numpy==1.19.0  
 keras==2.1.5  
 opencv-python==4.5.1  
