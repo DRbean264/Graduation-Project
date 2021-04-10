@@ -3,12 +3,8 @@
 
 ## 目录
 1. [主要工作 Contribution](#主要工作)
-3. [环境配置 Environment](#环境配置)
-5. [代码功能 Function](#代码功能)
-6. [文件下载 Download](#文件下载)
-7. [预测步骤 How2predict](#预测步骤)
-8. [训练步骤 How2train](#训练步骤)
-9. [参考资料 Reference](#Reference)
+2. [环境配置 Environment](#环境配置)
+3. [代码功能 Function](#代码功能)
 
 ## 主要工作
 1. 通过人脸关键点检测实现人脸区域的对齐及剪裁，接着对人脸区域进行划分并提取出各小区域（ROI）中像素平均值随时间变化的一维信号，最后进行心率频率范围的带通滤波。通过以上操作初步减小人体运动，环境光，电子设备等噪声。  
@@ -55,4 +51,13 @@ pip install face_recognition -i https://pypi.tuna.tsinghua.edu.cn/simple
 最后进入[环境检测Notebook](Env_Test.ipynb)，检查环境是否配置一致  
 
 ## 代码功能
-
+1. [Frames-Alignment](Frames_Alignment.py)文件中包括了对原始视频进行人脸对齐，人脸框切割，人脸区域划分，肤色分割以及区域信号提取的代码。
+2. [Cache-Signal](Cache_Signal.py)文件中包括了对提取出的ROI信号进行缓存，信号滤波的代码。
+3. [ROI-Signal-Visualization](ROI_Signal_Visualization.py)文件对信号进行可视化显示。
+4. [Network](Network.py)文件中包括了本文提出的级联网络结构的定义。
+5. [Training](Training-Demo.ipynb)文件则为深度学习网络训练的整个pipeline，包括数据集的读取，数据增强，预处理，网络的训练，结果的可视化分析（B-A图，回归图）等。
+6. [Video-Codec](Video-Codec.ipynb)文件的功能是进行视频编码格式转换，实验视频压缩对此系统的影响。
+7. [Learning-Curve](Learning-Curve.ipynb)则可以对训练时保存的历史记录进行可视化。
+8. [Dlib-Stability-Check](Dlib-Stability-Check-Demo.ipynb)用于测试dlib人脸关键点检测算法的稳定性。
+9. [HR-Weight-Network-Visualization](HR-Weight-Network-Visualization-Demo.ipynb)文件的作用时对自适应加权网络给出的5个权重输出进行可视化分析。
+10. [Inference](Inference-Demo.ipynb)用于对自己的视频进行测试，即可以拍摄一段还有人脸的视频，利用此系统进行心率值估计。
